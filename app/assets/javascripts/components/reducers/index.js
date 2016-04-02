@@ -1,8 +1,8 @@
 import { combineReducers } from 'redux';
-import counter from './counter';
+import loan from './loan';
 
 const rootReducer = combineReducers({
-  counter
+  loan
 });
 
 export default rootReducer;

@@ -1,0 +1,155 @@
+.FeaturedProducts__root {
+  padding-left: 0;
+  list-style: none;
+  display: flex;
+  align-items: stretch;
+  justify-content: space-between;
+  flex-direction: column;
+
+  @media (min-width: 44rem) {
+    flex-direction: row;
+    align-items: center;
+  }
+}
+
+.FeaturedProducts__product {
+  border: 1px $light-grey solid;
+  border-radius: 0.125em;
+  text-align: center;
+  margin-bottom: 1em;
+  min-width: 0;
+  flex: 1 1;
+
+  &:hover {
+    transition:  background-color 150ms, border-color 100ms;
+    background-color: rgba($brand-color, 0.1);
+    border-color: rgba($brand-color, 0.6);
+
+    .FeaturedProducts__heading,
+    .FeaturedProducts__lender-logo,
+    .FeaturedProducts__rates,
+    .FeaturedProducts__rate {
+      border-color: rgba($brand-color, 0.6);
+    }
+    .FeaturedProducts__heading {
+      color: $brand-color;
+    }
+  }
+  @media (min-width: 44rem) {
+    margin-right: 1em;
+
+    &:nth-child(2) {
+      order: -1;
+    }
+    &:last-of-type {
+      margin-right: 0;
+    }
+  }
+}
+
+.FeaturedProducts__heading {
+  border-bottom: 1px $light-grey solid;
+  transition: border-color 100ms;
+  color: rgba($accent-color, 1);
+  padding: 0.75em 0.5em;
+  display: block;
+  margin: 0;
+}
+
+.FeaturedProducts__link {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+}
+
+.FeatureProducts__content {
+  padding: 2em;
+}
+
+.FeaturedProducts__repayment {
+  margin-bottom: 1.5em;
+
+}
+
+.FeaturedProducts__repayment-amount {
+  font-family: 'Geomanist-Light', 'AvenirNext-Light', sans-serif;
+  font-size: 300%;
+
+  .\$ {
+    font-family: 'Geomanist-Regular', 'AvenirNext-Regular', sans-serif;
+    vertical-align: middle;
+    position: relative;
+    top: -0.0625em;
+    font-size: 70%;
+  }
+}
+
+.FeaturedProducts__repayment-term {
+  color: rgba(black, 0.6);
+}
+
+.FeaturedProducts__lender-logo {
+  transition:  border-color 100ms;
+  border: 1px $light-grey solid;
+  border-radius: 0.125em;
+  position: relative;
+  background: white;
+  margin: 0.5em auto;
+  max-width: 100%;
+  display: block;
+}
+
+.FeaturedProducts__product-name {
+  text-overflow: ellipsis;
+  font-weight: inherit;
+  white-space: nowrap;
+  color: $brand-color;
+  font-size: inherit;
+  overflow: hidden;
+  margin-top: 1em;
+}
+
+.FeaturedProducts__rates {
+  transition: border-color 100ms;
+  border-top: 1px $light-grey solid;
+  padding-left: 0;
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
+  margin: 0;
+}
+
+.FeaturedProducts__rate {
+  transition: border-color 100ms;
+  border-right: 1px $light-grey solid;
+  padding: 1em 0.5em;
+  flex: 1 1;
+
+  &:last-of-type {
+    border-right: none;
+  }
+}
+
+.FeaturedProducts__rate-percentage {
+  font-family: 'Geomanist-Regular', 'AvenirNext-DemiBold', sans-serif;
+  font-size: 150%;
+}
+
+.FeaturedProducts__label-fallback {
+  display: none;
+}
+
+.FeaturedProducts__rate-label {
+  text-transform: uppercase;
+  color: rgba(black, 0.6);
+  font-size: 70%;
+
+  &::before {
+    content: "P.A. ";
+
+    @media (min-width: 64rem) {
+      content: "Per Annum "
+    }
+  }
+}

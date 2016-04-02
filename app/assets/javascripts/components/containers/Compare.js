@@ -1,21 +1,21 @@
 import React, { Component } from 'react';
 import { render } from 'react-dom'
 import { Provider } from 'react-redux';
-import CounterApp from './CounterApp';
+
 import configureStore from '../store/configureStore';
-import {setCounter} from '../actions/counter'
+
+import CompareProducts from './CompareProducts';
 
 const store = configureStore();
 
-export default class Root extends Component {
-  componentWillMount() {
-    store.dispatch(setCounter(this.props.counter));
-  }
+class Compare extends Component {
   render() {
     return (
       <Provider store={store}>
-        <CounterApp />
+        <CompareProducts/>
       </Provider>
     );
   }
 }
+
+export default Compare;

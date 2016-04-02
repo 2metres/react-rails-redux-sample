@@ -1,0 +1,24 @@
+@import "base/base";
+@import "components/**/*";
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+body {
+  color: rgba(black, 0.8);
+  font-family: 'SourceSansPro-Light', sans-serif;
+  font-weight: 300;
+  margin: 0;
+}
+
+h1, h2, h3, h4, h5, h6, label {
+  font-family: 'Geomanist-Book', 'AvenirNext-DemiBold', sans-serif;
+  font-weight: normal;
+}
