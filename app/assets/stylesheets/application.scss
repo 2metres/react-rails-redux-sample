@@ -12,13 +12,18 @@ html {
 }
 
 body {
-  color: rgba(black, 0.8);
-  font-family: 'SourceSansPro-Light', sans-serif;
-  font-weight: 300;
+  font-family: 'SourceSansPro-Light', '-apple-system-body', sans-serif;
+  color: rgba(black, 0.65);
+  font-weight: normal;
   margin: 0;
 }
 
 h1, h2, h3, h4, h5, h6, label {
-  font-family: 'Geomanist-Book', 'AvenirNext-DemiBold', sans-serif;
+  font-family: 'Geomanist-Regular', '-apple-system-headline', sans-serif;
   font-weight: normal;
+}
+
+.container {
+  max-width: 46rem;
+  margin: 0 auto;
 }

@@ -39,6 +39,7 @@ bower.json
 .idea
 
 node_modules
+config/initializers/robie-gem.rb
 
 ### Vim ###
 [._]*.s[a-w][a-z]

@@ -10,9 +10,9 @@ let products = [
 class FeaturedProducts extends Component {
   renderProductRate(rate) {
     return (
-      <li key={rate.label} className="FeaturedProducts__rate">
+      <li key={rate.label} className="FeaturedProducts__rate" aria-label={ numeral(rate.percentage).format('0.00%') + " Per Annum " + rate.label}>
         <div className="FeaturedProducts__rate-percentage">{ numeral(rate.percentage).format('0.00%') }</div>
-        <div className="FeaturedProducts__rate-label"><span className="FeaturedProducts__label-fallback">Per annum</span>{rate.label}</div>
+        <div className="FeaturedProducts__rate-label"><span className="FeaturedProducts__label-fallback">Per Annum</span>{rate.label}</div>
       </li>
     )
   }
@@ -36,7 +36,9 @@ class FeaturedProducts extends Component {
   }
   render() {
     return (
-      <ol className="FeaturedProducts__root">{ products.map(product => this.renderProduct(product)) }</ol>
+      <section className="FeaturedProducts__root">
+        <ol className="FeaturedProducts__list">{ products.map(product => this.renderProduct(product)) }</ol>
+      </section>
     );
   }
 }

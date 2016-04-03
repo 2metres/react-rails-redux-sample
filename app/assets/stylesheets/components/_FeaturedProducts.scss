@@ -1,27 +1,46 @@
 .FeaturedProducts__root {
-  padding-left: 0;
-  list-style: none;
-  display: flex;
-  align-items: stretch;
-  justify-content: space-between;
-  flex-direction: column;
+  -webkit-overflow-scrolling: touch;
+  overflow-y: hidden;
+  overflow-x: scroll;
+  max-width: 64rem;
+  margin: 1rem 0;
+}
 
-  @media (min-width: 44rem) {
-    flex-direction: row;
-    align-items: center;
+.FeaturedProducts__list {
+  transition: width 150ms;
+  justify-content: space-between;
+  width: calc(300vw - 50%);
+  align-items: stretch;
+  flex-direction: row;
+  list-style: none;
+  padding: 0 1rem;
+  margin: 0 0 1rem 0;
+  display: flex;
+
+  @media (min-width: 24rem) {
+    width: calc(250vw - 40%);
+  }
+  @media (min-width: 32rem) {
+    width: calc(200vw - 30%);
+  }
+  @media (min-width: 46rem) {
+    width: 100%;
+    padding: 0;
   }
 }
 
 .FeaturedProducts__product {
+  transition:  background-color 300ms, border-color 100ms;
   border: 1px $light-grey solid;
-  border-radius: 0.125em;
   text-align: center;
-  margin-bottom: 1em;
+  margin-right: 1rem;
   min-width: 0;
   flex: 1 1;
 
+  &:last-of-type {
+    margin-right: 0;
+  }
   &:hover {
-    transition:  background-color 150ms, border-color 100ms;
     background-color: rgba($brand-color, 0.1);
     border-color: rgba($brand-color, 0.6);
 
@@ -35,19 +54,15 @@
       color: $brand-color;
     }
   }
-  @media (min-width: 44rem) {
-    margin-right: 1em;
-
+  @media (min-width: 46rem) {
     &:nth-child(2) {
       order: -1;
-    }
-    &:last-of-type {
-      margin-right: 0;
     }
   }
 }
 
 .FeaturedProducts__heading {
+  font-family: 'Geomanist-Regular', sans-serif;
   border-bottom: 1px $light-grey solid;
   transition: border-color 100ms;
   color: rgba($accent-color, 1);
@@ -63,7 +78,7 @@
 }
 
 .FeatureProducts__content {
-  padding: 2em;
+  padding: 12% 0 10%;
 }
 
 .FeaturedProducts__repayment {
@@ -72,15 +87,15 @@
 }
 
 .FeaturedProducts__repayment-amount {
-  font-family: 'Geomanist-Light', 'AvenirNext-Light', sans-serif;
+  font-family: 'Geomanist-Regular', sans-serif;
   font-size: 300%;
 
   .\$ {
-    font-family: 'Geomanist-Regular', 'AvenirNext-Regular', sans-serif;
+    font-family: 'Geomanist-Book', sans-serif;
     vertical-align: middle;
     position: relative;
     top: -0.0625em;
-    font-size: 70%;
+    font-size: 60%;
   }
 }
 
@@ -95,7 +110,7 @@
   position: relative;
   background: white;
   margin: 0.5em auto;
-  max-width: 100%;
+  max-width: 60%;
   display: block;
 }
 
@@ -107,6 +122,7 @@
   font-size: inherit;
   overflow: hidden;
   margin-top: 1em;
+  padding: 0 1em;
 }
 
 .FeaturedProducts__rates {
@@ -132,7 +148,7 @@
 }
 
 .FeaturedProducts__rate-percentage {
-  font-family: 'Geomanist-Regular', 'AvenirNext-DemiBold', sans-serif;
+  font-family: 'Geomanist-Book', sans-serif;
   font-size: 150%;
 }
 
@@ -147,9 +163,5 @@
 
   &::before {
     content: "P.A. ";
-
-    @media (min-width: 64rem) {
-      content: "Per Annum "
-    }
   }
 }
