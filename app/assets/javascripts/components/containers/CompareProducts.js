@@ -3,7 +3,7 @@ import { connect } from 'react-redux';
 import React, { Component } from 'react';
 
 import FeaturedProducts from '../components/FeaturedProducts';
-import ProductList from '../components/ProductList';
+import ProductComparision from '../components/ProductComparision';
 
 import * as CounterActions from '../actions/loan';
 
@@ -12,7 +12,7 @@ class CompareProducts extends Component {
     return (
       <div>
         <FeaturedProducts/>
-        <ProductList/>
+        <ProductComparision/>
       </div>
     );
   }

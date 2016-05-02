@@ -1,0 +1,90 @@
+.ProductComparision__root {
+
+}
+
+.ProductComparision__products-list {
+  list-style: none;
+  padding-left: 0;
+  margin: 1rem 0;
+}
+
+.ProductComparision__header,
+.ProductComparision__product {
+  flex-direction: row;
+  align-items: center;
+  display: flex;
+}
+
+.ProductComparision__product {
+  border-top: 1px $light-grey solid;
+  padding: 0.5em 0;
+
+  .ProductComparision__rate-label:before {
+    content: "P.A. ";
+  }
+}
+
+.ProductComparision__lender {
+  flex: 1 12;
+}
+
+.ProductComparision__lender-logo {
+  display: none;
+
+  @media (min-width: 48rem) {
+    display: block;
+  }
+}
+
+.ProductComparision__lender-name {
+  @media (min-width: 48rem) {
+    display: none;
+  }
+}
+
+.ProductComparision__product-details {
+  flex: 2 12;
+}
+
+.ProductComparision__rates {
+  flex-direction: row;
+  text-align: center;
+  display: flex;
+  flex: 2 12;
+}
+
+.ProductComparision__rate {
+  flex: 1 12 50%;
+}
+
+.ProductComparision__rate-label {
+  text-transform: uppercase;
+  font-size: 0.625em;
+}
+
+.ProductComparision__label-fallback {
+  display: none;
+}
+
+.ProductComparision__repayment {
+  text-align: right;
+  flex: 1 12;
+}
+
+.ProductComparision__features-list {
+  flex: 1 12 50%;
+  font-size: 0.75em;
+  list-style: none;
+  padding-left: 0;
+  flex-wrap: wrap;
+  display: none;
+  margin: 0;
+
+  @media (min-width: 48rem) {
+    display: flex;
+  }
+}
+
+.ProductComparision__feature {
+  flex: 1 12 50%;
+}

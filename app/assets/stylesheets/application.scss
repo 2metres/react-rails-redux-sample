@@ -23,6 +23,12 @@ h1, h2, h3, h4, h5, h6, label {
   font-weight: normal;
 }
 
+img {
+  max-width: 100%;
+  display: block;
+  width: auto;
+}
+
 .container {
   max-width: 46rem;
   margin: 0 auto;
